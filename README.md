@@ -1,4 +1,4 @@
-# 📌 DBhttps://github.com/tndals11/DBMS/blob/main/README.md
+# 📌 DB
 ---
 # 데이터베이스란
 ---
