@@ -45,8 +45,7 @@ VALUES
     
 SELECT * FROM `rainbow`;
 
-INSERT INTO `rainbow`
-values ('green', '초록');
-
+-- INSERT INTO `rainbow`
+-- values ('green', '초록');
 # Error Code: 1265. Data truncated for column 'color'
 # >> ENUM 목록에 존재하지 않는 데이터 삽입 시 발생
