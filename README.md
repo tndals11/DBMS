@@ -162,7 +162,7 @@ INNER JOIN B ON A.id = B.id;
 
 --- 
 
-### 📥 2. LEFT JOIN (LEFT OUTER JOIN)
+### ⬅️ 2. LEFT JOIN (LEFT OUTER JOIN)
 
 sql
 SELECT *
