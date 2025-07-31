@@ -154,20 +154,11 @@
 - 두 테이블 모두에서 **일치하는 값이 존재하는 행만** 반환합니다.
 - 일치하지 않는 데이터는 제외됩니다.
 
-```sql
-SELECT *
-FROM A
-INNER JOIN B ON A.id = B.id;
 ✅ 교집합
 
 ---
 
 ### ⬅️ 2. LEFT JOIN (LEFT OUTER JOIN)
-
-```sql
-SELECT *
-FROM A
-LEFT JOIN B ON A.id = B.id;```
 
  ✅ A 중심의 조인 (왼쪽 기준)
 -- A의 모든 행 + B에서 일치하는 값
@@ -182,12 +173,6 @@ LEFT JOIN B ON A.id = B.id;```
 
 일치하지 않는 경우에는 NULL이 반환됩니다.
 
-```sql
-복사
-편집
-SELECT *
-FROM A
-RIGHT JOIN B ON A.id = B.id;```
 ✅ B 중심의 조인 (오른쪽 기준)
 
 ---
@@ -197,12 +182,6 @@ RIGHT JOIN B ON A.id = B.id;```
 
 일치하지 않는 경우 NULL로 채웁니다.
 
-```sql
-복사
-편집
-SELECT *
-FROM A
-FULL OUTER JOIN B ON A.id = B.id;```
 ✅ 합집합
 
 ⚠️ 일부 DBMS(MySQL 등)는 FULL JOIN을 직접 지원하지 않습니다.
@@ -215,12 +194,6 @@ FULL OUTER JOIN B ON A.id = B.id;```
 
 조인 조건이 없으므로 결과 행 수 = A 행 수 × B 행 수
 
-```sql
-복사
-편집
-SELECT *
-FROM A
-CROSS JOIN B;```
 ✅ 조합 가능한 모든 경우
 
 ---
