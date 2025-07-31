@@ -140,3 +140,89 @@
 | **Default**              | 값 미입력 시 기본값 자동 설정                  |
 
 ---
+
+## 📌 JOIN 이란?
+
+`JOIN`은 두 개 이상의 테이블을 **공통된 컬럼**을 기준으로 연결해, 하나의 통합된 결과 집합을 생성하는 SQL 명령어입니다.
+
+---
+
+## 🧩 JOIN 종류
+
+### 🔗 1. INNER JOIN
+
+- 두 테이블 모두에서 **일치하는 값이 존재하는 행만** 반환합니다.
+- 일치하지 않는 데이터는 제외됩니다.
+
+```sql
+SELECT *
+FROM A
+INNER JOIN B ON A.id = B.id;
+✅ 교집합
+
+📥 2. LEFT JOIN (LEFT OUTER JOIN)
+왼쪽 테이블(A)의 모든 행을 포함하고,
+
+오른쪽 테이블(B)에 일치하는 데이터가 있다면 함께 출력합니다.
+
+일치하지 않는 경우에는 NULL이 반환됩니다.
+
+sql
+복사
+편집
+SELECT *
+FROM A
+LEFT JOIN B ON A.id = B.id;
+✅ A 중심의 조인 (왼쪽 기준)
+
+📤 3. RIGHT JOIN (RIGHT OUTER JOIN)
+오른쪽 테이블(B)의 모든 행을 포함하고,
+
+왼쪽 테이블(A)에 일치하는 데이터가 있다면 함께 출력합니다.
+
+일치하지 않는 경우에는 NULL이 반환됩니다.
+
+sql
+복사
+편집
+SELECT *
+FROM A
+RIGHT JOIN B ON A.id = B.id;
+✅ B 중심의 조인 (오른쪽 기준)
+
+🔄 4. FULL JOIN (FULL OUTER JOIN)
+양쪽 테이블의 모든 행을 포함하며,
+
+일치하지 않는 경우 NULL로 채웁니다.
+
+sql
+복사
+편집
+SELECT *
+FROM A
+FULL OUTER JOIN B ON A.id = B.id;
+✅ 합집합
+
+⚠️ 일부 DBMS(MySQL 등)는 FULL JOIN을 직접 지원하지 않습니다.
+👉 UNION과 함께 사용하거나 LEFT JOIN + RIGHT JOIN 조합 필요
+
+❌ 5. CROSS JOIN
+두 테이블의 **모든 조합(카티션 곱)**을 반환합니다.
+
+조인 조건이 없으므로 결과 행 수 = A 행 수 × B 행 수
+
+sql
+복사
+편집
+SELECT *
+FROM A
+CROSS JOIN B;
+✅ 조합 가능한 모든 경우
+
+📝 JOIN 비교 요약표
+JOIN 종류	기준 테이블	일치 여부	포함 여부	NULL 포함 여부
+INNER JOIN	양쪽	일치하는 경우만	✅ 일치 데이터만	❌ 없음
+LEFT JOIN	왼쪽(A)	일치 여부 무관	✅ A 전부 + B 일부	✅ B 없으면 NULL
+RIGHT JOIN	오른쪽(B)	일치 여부 무관	✅ B 전부 + A 일부	✅ A 없으면 NULL
+FULL JOIN	양쪽	일치 여부 무관	✅ A + B 전체	✅ 모두 가능
+CROSS JOIN	없음	조건 없음	✅ 전체 조합	❌ 없음
