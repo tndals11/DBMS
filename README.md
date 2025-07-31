@@ -167,7 +167,7 @@ INNER JOIN B ON A.id = B.id;```
 ```sql
 SELECT *
 FROM A
-LEFT JOIN B ON A.id = B.id;
+LEFT JOIN B ON A.id = B.id;```
 
  ✅ A 중심의 조인 (왼쪽 기준)
 -- A의 모든 행 + B에서 일치하는 값
@@ -187,7 +187,7 @@ LEFT JOIN B ON A.id = B.id;
 편집
 SELECT *
 FROM A
-RIGHT JOIN B ON A.id = B.id;
+RIGHT JOIN B ON A.id = B.id;```
 ✅ B 중심의 조인 (오른쪽 기준)
 
 ---
@@ -202,7 +202,7 @@ RIGHT JOIN B ON A.id = B.id;
 편집
 SELECT *
 FROM A
-FULL OUTER JOIN B ON A.id = B.id;
+FULL OUTER JOIN B ON A.id = B.id;```
 ✅ 합집합
 
 ⚠️ 일부 DBMS(MySQL 등)는 FULL JOIN을 직접 지원하지 않습니다.
@@ -220,7 +220,7 @@ FULL OUTER JOIN B ON A.id = B.id;
 편집
 SELECT *
 FROM A
-CROSS JOIN B;
+CROSS JOIN B;```
 ✅ 조합 가능한 모든 경우
 
 ---
