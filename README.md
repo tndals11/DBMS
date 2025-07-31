@@ -154,7 +154,7 @@
 - 두 테이블 모두에서 **일치하는 값이 존재하는 행만** 반환합니다.
 - 일치하지 않는 데이터는 제외됩니다.
 
-sql
+```sql
 SELECT *
 FROM A
 INNER JOIN B ON A.id = B.id;
@@ -164,7 +164,7 @@ INNER JOIN B ON A.id = B.id;
 
 ### ⬅️ 2. LEFT JOIN (LEFT OUTER JOIN)
 
-sql
+```sql
 SELECT *
 FROM A
 LEFT JOIN B ON A.id = B.id;
@@ -182,7 +182,7 @@ LEFT JOIN B ON A.id = B.id;
 
 일치하지 않는 경우에는 NULL이 반환됩니다.
 
-sql
+```sql
 복사
 편집
 SELECT *
@@ -197,7 +197,7 @@ RIGHT JOIN B ON A.id = B.id;
 
 일치하지 않는 경우 NULL로 채웁니다.
 
-sql
+```sql
 복사
 편집
 SELECT *
@@ -215,7 +215,7 @@ FULL OUTER JOIN B ON A.id = B.id;
 
 조인 조건이 없으므로 결과 행 수 = A 행 수 × B 행 수
 
-sql
+```sql
 복사
 편집
 SELECT *
