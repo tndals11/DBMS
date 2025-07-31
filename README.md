@@ -164,10 +164,10 @@ INNER JOIN B ON A.id = B.id;
 
 ### ⬅️ 2. LEFT JOIN (LEFT OUTER JOIN)
 
--- sql
--- SELECT *
--- FROM A
--- LEFT JOIN B ON A.id = B.id;
+sql
+SELECT *
+FROM A
+LEFT JOIN B ON A.id = B.id;
 
  ✅ A 중심의 조인 (왼쪽 기준)
 -- A의 모든 행 + B에서 일치하는 값
