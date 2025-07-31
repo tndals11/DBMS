@@ -177,20 +177,9 @@
 
 ---
 
-### 🔄 4. FULL JOIN (FULL OUTER JOIN)
-양쪽 테이블의 모든 행을 포함하며,
+### ❌ 4. CROSS JOIN
 
-일치하지 않는 경우 NULL로 채웁니다.
-
-✅ 합집합
-
-⚠️ 일부 DBMS(MySQL 등)는 FULL JOIN을 직접 지원하지 않습니다.
-👉 UNION과 함께 사용하거나 LEFT JOIN + RIGHT JOIN 조합 필요
-
----
-
-### ❌ 5. CROSS JOIN
-두 테이블의 **모든 조합(카티션 곱)**을 반환합니다.
+-- 두 테이블의 **모든 조합(카티션 곱)** 을 반환합니다.
 
 조인 조건이 없으므로 결과 행 수 = A 행 수 × B 행 수
 
@@ -205,5 +194,4 @@
 | INNER JOIN    | 양쪽         | 일치하는 경우만   | ✅ 일치 데이터만              | ❌ 없음                |
 | LEFT JOIN     | 왼쪽 (A)     | 일치 여부 무관    | ✅ A 전부 + B 일부            | ✅ B 없으면 NULL       |
 | RIGHT JOIN    | 오른쪽 (B)  | 일치 여부 무관    | ✅ B 전부 + A 일부            | ✅ A 없으면 NULL       |
-| FULL JOIN     | 양쪽         | 일치 여부 무관    | ✅ A + B 전체                 | ✅ 모두 가능           |
 | CROSS JOIN    | 없음         | 조건 없음         | ✅ 전체 조합 (A × B)          | ❌ 없음 
