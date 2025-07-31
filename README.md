@@ -158,6 +158,7 @@
 SELECT *
 FROM A
 INNER JOIN B ON A.id = B.id;```
+
 ✅ 교집합
 
 --- 
