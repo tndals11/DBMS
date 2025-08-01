@@ -338,17 +338,17 @@ SQL에서 **switch-case**처럼 사용됩니다.
 
 ## 2️⃣ **트리거 기본 문법**
 
-DELIMITER $$
+     DELIMITER $$
 
-CREATE TRIGGER 트리거명
-    BEFORE INSERT
-    ON 테이블명
-    FOR EACH ROW
-BEGIN
-    -- 실행할 SQL 코드 작성 --
-END $$
+    CREATE TRIGGER 트리거명
+        BEFORE INSERT
+        ON 테이블명
+        FOR EACH ROW
+    BEGIN
+        -- 실행할 SQL 코드 작성 --
+    END $$
 
-DELIMITER ;
+    DELIMITER ;
 
 ---
 
