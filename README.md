@@ -437,7 +437,7 @@ SQL에서 **switch-case**처럼 사용됩니다.
 
 ---
 
-## 반정규화 (De-normalization)
+# 📘반정규화 (De-normalization)
 
 ### 📌 개요
 
